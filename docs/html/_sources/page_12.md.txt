@@ -1,0 +1,15 @@
+---
+layout: default
+title: "MWlamprop"
+---
+
+
+
+# **12.-** <span style="color:lightblue">Fitting the EC network model</span>
+
+
+![](../../reports/figures/Abstract_Fig_2.png){width="900px" align=center}  
+
+**Grand average EC modulations across tasks.** *Modulations of EC across VFM, RS and MOVIE tasks point to a reconfiguration of feedforward and feedback interactions.*
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

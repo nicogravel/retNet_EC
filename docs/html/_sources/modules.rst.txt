@@ -1,0 +1,7 @@
+lamidec
+=======
+
+.. toctree::
+   :maxdepth: 4
+
+   lamidec

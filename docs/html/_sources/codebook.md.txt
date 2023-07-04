@@ -1,0 +1,179 @@
+---
+layout: default
+title: "MWlamprop"
+---
+
+
+# 📘 <span style="color:lightgray">Research handbook</span> 
+
+## Set up research project codebook using Sphinx
+
+Which must consist on a structured folder organization, a reproducible python environment, your home-made python package with your research code, a github repo and the documentation.
+
+To help organize your research code, so that it is easy to understand for others and works reliably on other machines, we document the project (its data, research code and results), using [Sphinx](https://www.sphinx-doc.org/en/master/index.html), [Markdown](https://www.writethedocs.org/guide/writing/markdown/#how-to-use-markdown) and the [MyST](https://myst-parser.readthedocs.io/en/latest/index.html) Markdown parser.
+
+This is a general guideline. Details can be found in the following links:
+
+* [The Good Research Handbook](https://goodresearch.dev/index.html)
+* [Write the Docs](https://www.writethedocs.org/guide/writing/markdown/#how-to-use-markdown)
+* [Policy for abandoned projects](https://docs.readthedocs.io/en/stable/abandoned-projects.html)
+* [Cookiecutter Data Science](https://drivendata.github.io/cookiecutter-data-science/)
+
+
+First, we want to create a project folder that will contain the research code (Matlab, Python, Jupyter notebooks, etc), the data, the results and the documentatioin:
+
+```
+├── data
+  └── raw
+  └── processed
+├── docs
+├── results
+├── reports
+  └── figures
+  └── notes
+  └── references
+  └── slides
+├── code
+  └── notebooks
+  └── scripts
+  └── tests
+├── src
+  └── data
+  └── fatures
+  └── models
+  └── visualization
+├── tests
+└── .gitignore
+└── environment.yml
+└── README.md
+```
+
+First we set up a Conda environment:
+
+```
+conda create --name my_research_environment python=3.8
+conda activate my_research_environment
+conda install numpy scipy statsmodels matplotlib pandas seaborn tqdm
+conda install -c conda-forge jupyterlabconda
+conda install -c conda-forge sphinx
+conda install -c conda-forge markdown
+conda install -c conda-forge myst-parser
+conda install -c conda-forge alabaster
+conda install -c conda-forge graphviz
+conda env export > environment.yml
+```
+
+We can then recreate Conda environment from another computer:
+
+```
+conda env create --name recoveredenv --file environment.yml
+```
+
+Then we initialize Github:
+
+```
+echo "# MWlamprop" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/nicogravel/MWlamprop.git
+git push -u origin main
+```
+
+Crate a setup.py file in the root of your project and ad the following:
+
+```
+from setuptools import find_packages, setup
+
+setup(
+    name='src',
+    packages=find_packages(),
+)
+```
+Create an empty __init__.py file under the src directory:
+
+```
+touch src/__init__.py
+```
+
+Install your package from the root directory:
+
+```
+pip install -e .
+```
+
+Add a python file that prints "hello world" to your package:
+```
+echo "print('hello world')" > src/helloworld.py
+python
+>>> import src.helloworld
+hello world
+>>> exit()
+```
+
+The folder *docs* will be used to generate [sphinx](https://www.sphinx-doc.org/en/master/index.html) docs, `cd` into this directory and run:
+
+```
+pip install sphinx
+pip install sphinxcontrib-bibtex
+pip install sphinxcontrib-napoleon
+pip install -U sphinxcontrib-matlabdomain
+pip install sphinx-autodoc-typehints
+
+sphinx-quickstart
+make html
+```
+
+We then write the documentation using Markdown and build the documentation html files locally:
+
+```
+cd /Users/nicogravel/Documents/Gandalf/MWlamprop/docs/
+make html
+```
+
+Update your Github repository after modifying things:
+
+```
+git add .
+git commit -m "updated figures"
+git push -u origin main
+```
+
+It is important that, after working in the code, having document it using *docstring* conventions and installed it as in *package* in an *environment* the cluster, one *sync*'s the original package (here **lamidec**) locally:
+
+```
+sshpass -p pswxxxxxx rsync -avu   graveln@esi-svhpc1.esi.local:/home/graveln/Documents/MWlamprop/lamidec /Users/nicogravel/Documents/Gandalf/MWlamprop/
+
+sshpass -p pswxxxxxx rsync -avu   graveln@esi-svhpc1.esi.local:/home/graveln/Documents/MWlamprop/results/freqanal /Users/nicogravel/Documents/Gandalf/MWlamprop/
+```
+
+We can then install [sphinx.ext.napoleon](https://www.sphinx-doc.org/ar/master/usage/extensions/napoleon.html), a *sphinx* plugin, to automatically read the *doctsrings* we have written as 'readme's' in the top of our python scripts, and add that content to the package dictionary of functions. To do so:
+
+```
+sphinx-apidoc -f -o source /Users/nicogravel/Documents/Gandalf/MWlamprop/lamidec
+napeoleon extension of Phinx to parse Python code into readable *.rst* documentation files.
+```
+
+After these steps one wants to *make* the documentation locally. To build the documentation automatically, edit then the document modules.rst –if nescessary, and do *make clean* followed by *make html*.
+
+```
+cd docs
+make clean
+make html
+```
+
+After adding new code and document it as described, commit the changes to Github and update both the documentation and gthe package:
+
+```
+sshpass -p  pswxxxxxx rsync -avu   /Users/nicogravel/Documents/Gandalf/MWlamprop/lamidec graveln@esi-svhpc1.esi.local:/home/graveln/Documents/MWlamprop/
+
+sshpass -p  pswxxxxxx rsync -avu   /Users/nicogravel/Documents/Gandalf/MWlamprop/docs graveln@esi-svhpc1.esi.local:/home/graveln/Documents/MWlamprop/
+```
+To keep a local copy of the figures:
+
+```
+sshpass -p  pswxxxxxx rsync -avu   graveln@esi-svhpc1.esi.local:/home/graveln/Documents/MWlamprop/results/ /Users/nicogravel/Documents/Gandalf/MWlamprop/results/freqanal
+```
+
+To avoid entering your HPC access password, writer a custom profile or use *sshpass*.

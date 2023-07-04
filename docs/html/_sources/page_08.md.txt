@@ -1,0 +1,12 @@
+---
+layout: default
+title: "MWlamprop"
+---
+
+
+
+# **8.-** <span style="color:lightblue">On the wishlist</span>
+
+![](../../reports/figures/pRFmapping.png){width="900px" align=center}  
+
+**Representational similarity matrix.** **

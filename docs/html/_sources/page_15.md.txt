@@ -1,0 +1,15 @@
+---
+layout: default
+title: "MWlamprop"
+---
+
+
+
+# **15.-** <span style="color:lightblue">Analysis of estimated inputs</span>
+
+![](../../reports/figures/chamber.png){height="420px"}![](../../reports/figures/gandalf.png){height="400px"}  
+![](../../reports/figures/recordings.png){height="840px"}
+
+**Figure S1. Combining power and phase information enhances MV-TFR.** *When derived from power, MV-TFR captures more stimulus related information than when derived from phase estimates (GPR), albeit this relationship may be reversed for lower frequencies. Combining power and phase estimates (GPR) increased the sensitivity of the TFR to stimulus related information.*
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

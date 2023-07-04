@@ -1,0 +1,10 @@
+---
+layout: default
+title: "Introduction"
+---
+
+
+# **5.-** <span style="color:lightblue">BOLD signatures</span>
+
+On the wishlist: direct validation of relationship between FC/EC and neuronal activity
+Meanwhile, intermediate validation in sensory pathways: V1-V2-V3

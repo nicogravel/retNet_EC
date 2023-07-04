@@ -1,0 +1,20 @@
+---
+layout: default
+title: "MWlamprop"
+---
+
+
+
+# **14.-** <span style="color:lightblue">Comparison across tasks</span>
+
+![](../../reports/figures/grid.png){width="600px" align=center}  
+
+**Grid numbering and location of the recording chamber.** *The recording chamber was located on the occipital pole offering a good coverage of the upper bank of the calcarine sulcus and its gyrification towards the lunate sulcus, enabling recordings from the bottom right quadrant of the visual field.*
+
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+![](../../reports/figures/holes.png){width="600px" align=center}  

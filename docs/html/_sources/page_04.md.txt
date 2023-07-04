@@ -1,7 +1,0 @@
----
-layout: default
-title: "MWlamprop"
----
-
-
-# **4.-** <span style="color:lightblue">Neuroimaging</span>

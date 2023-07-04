@@ -1,8 +1,0 @@
----
-layout: default
-title: "MWlamprop"
----
-
-
-
-# **24.-** <span style="color:lightblue">Acknowledgements</span>

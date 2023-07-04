@@ -1,9 +1,0 @@
----
-layout: default
-title: "Introduction"
----
-
-
-# <span style="color:lightgray">Introduction</span>
-
-Neuronal representations of visual stimuli can be traced from large-scale brain recordings in humans using a variety of measurement modalities and decoding techniques. It is unclear, however, how the distributed visual representations these approaches provide relate to the brain’s anatomical structure at a more local scale, such as that of laminar-cortical circuits. This is an important question since laminar electrophysiological recordings in humans are rare, making high-field fMRI the most often used tool to study laminar-specific visual representations in humans. Therefore in this study, we investigate whether it is possible to relate laminar-specific electrophysiological responses in Macaque primary visual cortex to those responses observed in humans using 7T-fMRI. We hypothesise that, in both species, the temporal dynamics of the distinct visual information patterns estimated across laminae reflect the unfolding contribution of feedforward, lateral and feedback connections to the classical and extra-classical receptive field centre and surround of V1 neurones. To explore this hypothesis, we estimated the temporal dynamics of visual responses to a naturalistic stimuli set using a multivariate approach aimed to capture the reinstatement and flow of the distinct neuronal representation patterns each stimulus produces. Our results reveal, for the first time and at unprecedented detail, distinct spatiotemporal dynamics in visual information processing across laminar circuits, and point to a reconfiguration of feedforward, lateral and feedback interactions across the visual system. We interpret these patterns as footprints of cortical visual information processing at the scale of columnar and laminar circuits in the Monkey’s primary visual cortex.

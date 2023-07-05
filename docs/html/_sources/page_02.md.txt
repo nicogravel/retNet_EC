@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "retinocortex-EC"
+title: "retNet_EC"
 ---
 
 

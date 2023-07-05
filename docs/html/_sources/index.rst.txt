@@ -10,11 +10,11 @@
 ########
 
 *****
-Modeling task-dependent effective connectivity across the human V1-V2-V3 complex
+Network model of task-dependent effective connectivity across the human V1-V2-V3 complex using 7T-HCP dataset
 *****
 
-.. image:: /figures/visualcoordmappings.png
-   :width: 1000
+.... image:: /figures/visualcoordmappings.png
+..   :width: 1000
 
 
 

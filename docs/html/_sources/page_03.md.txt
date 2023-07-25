@@ -10,4 +10,4 @@ title: "retNet_EC"
 <hr style="border: 1px solid black; width:100%;"></hr>
 
 
-* Group the data ([Jupyter notebook](https://github.com/nicogravel/nicogravel.github.io/blob/main/assets/notebooks/HCP_ECVP_quadrants.ipynb))
+* Group the data ([Jupyter notebook](https://github.com/nicogravel/retNet_EC/blob/main/notebooks/HCP_ECVP_quadrants.ipynb))

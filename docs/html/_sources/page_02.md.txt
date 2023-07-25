@@ -9,5 +9,5 @@ title: "retNet_EC"
 
 <hr style="border: 1px solid black; width:100%;"></hr>
 
-* Download the HCP data ([Jupyter notebook](https://github.com/nicogravel/nicogravel.github.io/blob/main/assets/notebooks/HCP_7T_fetch.ipynb))
+* Download the HCP data ([Jupyter notebook](https://github.com/nicogravel/retNet_EC/blob/main/notebooks/HCP_7T_fetch.ipynb))
 

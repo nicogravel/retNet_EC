@@ -5,8 +5,9 @@ title: "retNet_EC"
 
 
 
-# <span style="color:lightblue">Modeling the foveal confluence</span>
+# <span style="color:lightblue">Fetching the 7T-fMRI retintotopy dataset</span>
 
 <hr style="border: 1px solid black; width:100%;"></hr>
 
-![](/figures/benson.png){width="800px"  align=center}
+* Download the HCP data ([Jupyter notebook](https://github.com/nicogravel/nicogravel.github.io/blob/main/assets/notebooks/HCP_7T_fetch.ipynb))
+

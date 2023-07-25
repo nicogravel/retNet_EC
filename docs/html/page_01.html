@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>1. Population receptive field mapping &#8212;  1.0.0 documentation</title>
+    <title>1. Introduction &#8212;  1.0.0 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
@@ -16,8 +16,8 @@
     <script src="_static/doctools.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="2. Modeling the foveal confluence" href="page_02.html" />
-    <link rel="prev" title="Task-dependent Directed Interactions Across Human Visual Cortex" href="index.html" />
+    <link rel="next" title="2. Fetching the 7T-fMRI retintotopy dataset" href="page_02.html" />
+    <link rel="prev" title="Task-dependent Directed Interactions Across Early Visual Cortex Measured with 7T fMRI" href="index.html" />
     <link href="_static/style.css" rel="stylesheet" type="text/css">
 
   </head><body>
@@ -32,10 +32,10 @@
     <ul>
         <li>
           &larr;
-          <a href="index.html" title="Previous document"><strong>Task-dependent Directed Interactions Across Human Visual Cortex</strong></a>
+          <a href="index.html" title="Previous document"><strong>Task-dependent Directed Interactions Across Early Visual Cortex Measured with 7T fMRI</strong></a>
         </li>
         <li>
-          <a href="page_02.html" title="Next document"><span class="section-number">2. </span><span style="color:lightblue">Modeling the foveal confluence</span></a>
+          <a href="page_02.html" title="Next document"><span class="section-number">2. </span><span style="color:lightblue">Fetching the 7T-fMRI retintotopy dataset</span></a>
           &rarr;
         </li>
     </ul>
@@ -45,45 +45,35 @@
 
           <div class="body" role="main">
             
-  <section class="tex2jax_ignore mathjax_ignore" id="span-style-color-lightblue-population-receptive-field-mapping-span">
-<h1><span class="section-number">1. </span><span style="color:lightblue">Population receptive field mapping</span><a class="headerlink" href="#span-style-color-lightblue-population-receptive-field-mapping-span" title="Permalink to this heading">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="span-style-color-lightblue-introduction-span">
+<h1><span class="section-number">1. </span><span style="color:lightblue">Introduction</span><a class="headerlink" href="#span-style-color-lightblue-introduction-span" title="Permalink to this heading">¶</a></h1>
 <hr style="border: 1px solid black; width:100%;"></hr>
 <section id="introduction">
 <h2><span class="section-number">1.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">¶</a></h2>
-<p>Many studies have suggested a link between gamma oscillations and visual cognition. Using human ECoG and variety of visual images including gratings of different contrast, visual noise and naturalistic images, <span id="id1">Hermes <em>et al.</em><sup><a class="reference internal" href="#id8" title="D. Hermes, K.J. Miller, B.A. Wandell, and J. Winawer. Stimulus Dependence of Gamma Oscillations in Human Visual Cortex. Cerebral Cortex, 25(9):2951-2959, 05 2014. URL: https://doi.org/10.1093/cercor/bhu091, arXiv:https://academic.oup.com/cercor/article-pdf/25/9/2951/14109749/bhu091.pdf, doi:10.1093/cercor/bhu091.">1</a></sup></span> observed that gamma oscillations were strongly elicited by some spatial contrast patterns such as gratings but absent in others, like certain forms of visual noise or natural images —which would supposedly recruit gamma oscillations for their visual processing. From these results they concluded that gamma oscillations may not be necessary for seeing.  Trying to shed light on the matter, a subsequent study by <span id="id2">Brunet and Fries<sup><a class="reference internal" href="#id7" title="Nicolas M. Brunet and Pascal Fries. Human visual cortical gamma reflects natural image structure. NeuroImage, 200:635-643, 2019. URL: https://www.sciencedirect.com/science/article/pii/S1053811919305488, doi:https://doi.org/10.1016/j.neuroimage.2019.06.051.">2</a></sup></span> used the same dataset but different analysis methods to explore an alternative hypothesis. Namely that, similarly to the spatial patterns elicited by gratings of different contrasts, local contrast structure on an image is directly related too to gamma activity. To measure this local contrast structure, they estimated the relative degree of focus (RDF) by computing the discrete cosine transform (DCT) of the image pixels, correlated this measure with gamma, and found a significant correlation (rho=0.63, p-value&lt;000.1). From this they concluded that RDF could be considered a metric of contrast in natural images <span id="id3"><sup><a class="reference internal" href="#id7" title="Nicolas M. Brunet and Pascal Fries. Human visual cortical gamma reflects natural image structure. NeuroImage, 200:635-643, 2019. URL: https://www.sciencedirect.com/science/article/pii/S1053811919305488, doi:https://doi.org/10.1016/j.neuroimage.2019.06.051.">2</a></sup></span>.</p>
-</section>
-<section id="methods">
-<h2><span class="section-number">1.2. </span>Methods<a class="headerlink" href="#methods" title="Permalink to this heading">¶</a></h2>
-<p>Here, we further examine this question using a different stimulation protocol and recording technique. As a first assessment, we went into examining the relationship between RDF and spectral power in the gamma band (35 - 70 Hz) and calculated the correlation between gamma spectral power (% change from baseline) and RDF across all sites. Briefly, to estimate the RDF we computed the  DCT energy of a section of each image in the stimulus set that overlapped with each recording site’s receptive field (RF), as follows. For each image (18 objects within their background) and recording site (12 depths comprising a cortical width between -550 and 550 ms) in a session (11 after their successful realignment to the granular layer), the centre and radius of the site’s RF  were used to extract pixels comprising a square centred at the RF’s centre. The square dimensions were twice the RF’s size. The RF size was calculated as the standard deviation of its 2D Gaussian model. This provided us with a section of the image overlapping with each site’s RF just enough to provide meaningful estimate of local contrast structure while avoiding the biasing influence in the DCT calculations of non-image grey pixels within the background. Subsequently, the resulting image’s sections were transformed to grayscale and the DCT energy was computed for each site. This provided us with RDF estimates for each site and image.</p>
-</section>
-<section id="results">
-<h2><span class="section-number">1.3. </span>Results<a class="headerlink" href="#results" title="Permalink to this heading">¶</a></h2>
-<table class="docutils align-default">
-<thead>
-<tr class="row-odd"><th class="head text-center"><p><a class="reference internal" href="_images/BOLD.png"><img alt="" class="align-center" src="_images/BOLD.png" style="width: 800px;" /></a></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-center"><p><strong>Correlation between RDF within the receptive field (RF-RDG) and gamma spectral power.</strong>  We calculated Spearman’s <em>rho</em> between these RDF estimates and gamma activity in the 35 - 70 Hz band pooled from a time window comprising 200 - 1200 ms after stimulus onset and found a smaller yet significant correlation (rho=0.11, p-value &lt; 0.0001, N= <em>18 x 12 x 11</em>, <em>left panel</em>) than that reported in <span id="id4">Brunet and Fries<sup><a class="reference internal" href="#id7" title="Nicolas M. Brunet and Pascal Fries. Human visual cortical gamma reflects natural image structure. NeuroImage, 200:635-643, 2019. URL: https://www.sciencedirect.com/science/article/pii/S1053811919305488, doi:https://doi.org/10.1016/j.neuroimage.2019.06.051.">2</a></sup></span>. Colors represent the image’s RDF.</p></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="discussion">
-<h2><span class="section-number">1.4. </span>Discussion<a class="headerlink" href="#discussion" title="Permalink to this heading">¶</a></h2>
-<p>We found that the correlation between RDF and session-grouped sites was stronger than that between RDF and depth-grouped sites (rho=0.25, p-value &lt; 0.0001, N= <em>18 x 11</em>, <em>central panel</em>). Our results confirm and extend equivalent results obtained by <span id="id5">Brunet and Fries<sup><a class="reference internal" href="#id7" title="Nicolas M. Brunet and Pascal Fries. Human visual cortical gamma reflects natural image structure. NeuroImage, 200:635-643, 2019. URL: https://www.sciencedirect.com/science/article/pii/S1053811919305488, doi:https://doi.org/10.1016/j.neuroimage.2019.06.051.">2</a></sup></span> . Interestingly, the correlation between RDF and depth-grouped sites was negative (rho=-0.21, p-value &lt; 0.005, N= <em>18 x 12</em>, <em>right panel</em>), suggesting a non-linear contribution of different layers to the correlation pattern. To examine this pattern, we analysed the relationship of RDF as a function of cortical depth and found that RDF was higher for granular layers, following a inverted U-shape, almost opposite to the U-shape distribution  of RF size found for this dataset. Our results corroborate a monotonic relationship between RDF and the amplitude of gamma oscillations, provided the RF size factor is averaged out. Otherwise this correlation is negative, pointing to an inverse relationship between RDF and RF size.</p>
+<p>Scrutiny of the cortical neuronal circuits underlying human visual perception typically involves the summarization of large-scale recordings of brain activity under different perceptual states, with the combination of various measurement modalities and modeling techniques being critical in revealing organizing principles. However, how these approaches relate to the brain’s anatomical structure at a more local scale, such as that of retinotopically organized neuronal circuits in the visual cortex, remains an area of active research. Here, we set out to study such circuits by applying a previously established model of network communicability <span id="id1">Mitra <em>et al.</em><sup><a class="reference internal" href="#id11" title="A. Mitra, A. Z. Snyder, C. D. Hacker, and M. E. Raichle. Lag structure in resting-state fmri. Journal of Neurophysiology, 111(11):2374-2391, 2014. PMID: 24598530. URL: https://doi.org/10.1152/jn.00804.2013, arXiv:https://doi.org/10.1152/jn.00804.2013, doi:10.1152/jn.00804.2013.">1</a></sup></span> <span id="id2"><sup><a class="reference internal" href="#id8" title="Matthieu Gilson, Gustavo Deco, Karl J. Friston, Patric Hagmann, Dante Mantini, Viviana Betti, Gian Luca Romani, and Maurizio Corbetta. Effective connectivity inferred from fmri transition dynamics during movie viewing points to a balanced reconfiguration of cortical interactions. NeuroImage, 180:534-546, 2018. Brain Connectivity Dynamics. URL: https://www.sciencedirect.com/science/article/pii/S1053811917308108, doi:https://doi.org/10.1016/j.neuroimage.2017.09.061.">2</a></sup></span> to resting state (RS), movie watching (MOVIE) and visual field mapping (VFM) data from 157 subjects in the Human Connectome Project (HCP) 7T-fMRI dataset <span id="id3"><sup><a class="reference internal" href="#id10" title="Noah C. Benson, Keith W. Jamison, Michael J. Arcaro, An T. Vu, Matthew F. Glasser, Timothy S. Coalson, David C. Van Essen, Essa Yacoub, Kamil Ugurbil, Jonathan Winawer, and Kendrick Kay. The Human Connectome Project 7 Tesla retinotopy dataset: Description and population receptive field analysis. Journal of Vision, 18(13):23-23, 12 2018. URL: https://doi.org/10.1167/18.13.23, arXiv:https://arvojournals.org/arvo/content\_public/journal/jov/937687/i1534-7362-18-13-23.pdf, doi:10.1167/18.13.23.">3</a></sup></span>. By estimating the effective connectivity (EC) of the noise-diffusion network model that better predicts the spatiotemporal covariance structure of the data, we disentangle the contributions of directed interactions and local dynamics in shaping blood-oxygen dependent (BOLD) activity propagation across visual cortical areas V1, V2 and V3 <span id="id4">Gravel <em>et al.</em><sup><a class="reference internal" href="#id7" title="Nicolás Gravel, Remco J Renken, Ben M Harvey, Gustavo Deco, Frans W Cornelissen, and Matthieu Gilson. Propagation of BOLD Activity Reveals Task-dependent Directed Interactions Across Human Visual Cortex. Cerebral Cortex, 30(11):5899–5914, 2020. doi:10.1093/cercor/bhaa165.">4</a></sup></span>. First, addressing the need for validation of our approach, we confirm previous findings using 7T-fMRI and a smaller dataset for evidence of task-dependent changes in directed interactions across early visual cortex <span id="id5">Schira <em>et al.</em><sup><a class="reference internal" href="#id9" title="Mark M. Schira, Christopher W. Tyler, Branka Spehar, and Michael Breakspear. Modeling Magnification and Anisotropy in the Primate Foveal Confluence. PLoS Computational Biology, 6(1):e1000651, 2010. doi:10.1371/journal.pcbi.1000651.">5</a></sup></span>. We then extend these findings by including a new task (MOVIE) and show that a similar reconfiguration of feedforward and feedback connections between parafoveal and foveal regions occur, with feedback- outweighting feedforward- interactions during cognitively demanding tasks (VFM and MOVIE). Our findings demonstrate the reliability of our approach to summarize the neuronal interactions unfolding across the underlying circuit layout of the visual cortex during different perceptual states. We conclude that the relationship between BOLD statistics and the propagation of neuronal activity summarized by our modeling approach is of fundamental and methodological interest, as it opens the door to study neuronal circuit dynamics during different tasks noninvasively in humans.</p>
 </section>
 <section id="references">
-<h2><span class="section-number">1.5. </span>References<a class="headerlink" href="#references" title="Permalink to this heading">¶</a></h2>
+<h2><span class="section-number">1.2. </span>References<a class="headerlink" href="#references" title="Permalink to this heading">¶</a></h2>
 <div class="docutils container" id="id6">
-<div class="citation" id="id8" role="doc-biblioentry">
+<div class="citation" id="id11" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
-<p>D. Hermes, K.J. Miller, B.A. Wandell, and J. Winawer. Stimulus Dependence of Gamma Oscillations in Human Visual Cortex. <em>Cerebral Cortex</em>, 25(9):2951–2959, 05 2014. URL: <a class="reference external" href="https://doi.org/10.1093/cercor/bhu091">https://doi.org/10.1093/cercor/bhu091</a>, <a class="reference external" href="https://arxiv.org/abs/https://academic.oup.com/cercor/article-pdf/25/9/2951/14109749/bhu091.pdf">arXiv:https://academic.oup.com/cercor/article-pdf/25/9/2951/14109749/bhu091.pdf</a>, <a class="reference external" href="https://doi.org/10.1093/cercor/bhu091">doi:10.1093/cercor/bhu091</a>.</p>
+<p>A. Mitra, A. Z. Snyder, C. D. Hacker, and M. E. Raichle. Lag structure in resting-state fmri. <em>Journal of Neurophysiology</em>, 111(11):2374–2391, 2014. PMID: 24598530. URL: <a class="reference external" href="https://doi.org/10.1152/jn.00804.2013">https://doi.org/10.1152/jn.00804.2013</a>, <a class="reference external" href="https://arxiv.org/abs/https://doi.org/10.1152/jn.00804.2013">arXiv:https://doi.org/10.1152/jn.00804.2013</a>, <a class="reference external" href="https://doi.org/10.1152/jn.00804.2013">doi:10.1152/jn.00804.2013</a>.</p>
+</div>
+<div class="citation" id="id8" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
+<p>Matthieu Gilson, Gustavo Deco, Karl J. Friston, Patric Hagmann, Dante Mantini, Viviana Betti, Gian Luca Romani, and Maurizio Corbetta. Effective connectivity inferred from fmri transition dynamics during movie viewing points to a balanced reconfiguration of cortical interactions. <em>NeuroImage</em>, 180:534–546, 2018. Brain Connectivity Dynamics. URL: <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S1053811917308108">https://www.sciencedirect.com/science/article/pii/S1053811917308108</a>, <a class="reference external" href="https://doi.org/https://doi.org/10.1016/j.neuroimage.2017.09.061">doi:https://doi.org/10.1016/j.neuroimage.2017.09.061</a>.</p>
+</div>
+<div class="citation" id="id10" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">3</a><span class="fn-bracket">]</span></span>
+<p>Noah C. Benson, Keith W. Jamison, Michael J. Arcaro, An T. Vu, Matthew F. Glasser, Timothy S. Coalson, David C. Van Essen, Essa Yacoub, Kamil Ugurbil, Jonathan Winawer, and Kendrick Kay. The Human Connectome Project 7 Tesla retinotopy dataset: Description and population receptive field analysis. <em>Journal of Vision</em>, 18(13):23–23, 12 2018. URL: <a class="reference external" href="https://doi.org/10.1167/18.13.23">https://doi.org/10.1167/18.13.23</a>, <a class="reference external" href="https://arxiv.org/abs/https://arvojournals.org/arvo/content\_public/journal/jov/937687/i1534-7362-18-13-23.pdf">arXiv:https://arvojournals.org/arvo/content\_public/journal/jov/937687/i1534-7362-18-13-23.pdf</a>, <a class="reference external" href="https://doi.org/10.1167/18.13.23">doi:10.1167/18.13.23</a>.</p>
 </div>
 <div class="citation" id="id7" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></span>
-<span class="backrefs">(<a role="doc-backlink" href="#id2">1</a>,<a role="doc-backlink" href="#id3">2</a>,<a role="doc-backlink" href="#id4">3</a>,<a role="doc-backlink" href="#id5">4</a>)</span>
-<p>Nicolas M. Brunet and Pascal Fries. Human visual cortical gamma reflects natural image structure. <em>NeuroImage</em>, 200:635–643, 2019. URL: <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S1053811919305488">https://www.sciencedirect.com/science/article/pii/S1053811919305488</a>, <a class="reference external" href="https://doi.org/https://doi.org/10.1016/j.neuroimage.2019.06.051">doi:https://doi.org/10.1016/j.neuroimage.2019.06.051</a>.</p>
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">4</a><span class="fn-bracket">]</span></span>
+<p>Nicolás Gravel, Remco J Renken, Ben M Harvey, Gustavo Deco, Frans W Cornelissen, and Matthieu Gilson. Propagation of BOLD Activity Reveals Task-dependent Directed Interactions Across Human Visual Cortex. <em>Cerebral Cortex</em>, 30(11):5899–5914, 2020. <a class="reference external" href="https://doi.org/10.1093/cercor/bhaa165">doi:10.1093/cercor/bhaa165</a>.</p>
+</div>
+<div class="citation" id="id9" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">5</a><span class="fn-bracket">]</span></span>
+<p>Mark M. Schira, Christopher W. Tyler, Branka Spehar, and Michael Breakspear. Modeling Magnification and Anisotropy in the Primate Foveal Confluence. <em>PLoS Computational Biology</em>, 6(1):e1000651, 2010. <a class="reference external" href="https://doi.org/10.1371/journal.pcbi.1000651">doi:10.1371/journal.pcbi.1000651</a>.</p>
 </div>
 </div>
 </div>
@@ -98,10 +88,10 @@
     <ul>
         <li>
           &larr;
-          <a href="index.html" title="Previous document"><strong>Task-dependent Directed Interactions Across Human Visual Cortex</strong></a>
+          <a href="index.html" title="Previous document"><strong>Task-dependent Directed Interactions Across Early Visual Cortex Measured with 7T fMRI</strong></a>
         </li>
         <li>
-          <a href="page_02.html" title="Next document"><span class="section-number">2. </span><span style="color:lightblue">Modeling the foveal confluence</span></a>
+          <a href="page_02.html" title="Next document"><span class="section-number">2. </span><span style="color:lightblue">Fetching the 7T-fMRI retintotopy dataset</span></a>
           &rarr;
         </li>
     </ul>
@@ -128,20 +118,21 @@
 
 <h3>Navigation</h3>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">1. <span style="color:lightblue">Population receptive field mapping</span></a></li>
-<li class="toctree-l1"><a class="reference internal" href="page_02.html">2. <span style="color:lightblue">Modeling the foveal confluence</span></a></li>
-<li class="toctree-l1"><a class="reference internal" href="page_03.html">3. <span style="color:lightblue">Propagation of BOLD activity across visual field maps V1, V2, and V3.</span></a></li>
-<li class="toctree-l1"><a class="reference internal" href="page_04.html">4. <span style="color:lightblue">Grouping BOLD activity into foveal and para-foveal quarter-fields</span></a></li>
-<li class="toctree-l1"><a class="reference internal" href="page_05.html">5. <span style="color:lightblue">Task-dependent organization in EC for VFM, RS and MOVIE tasks</span></a></li>
-<li class="toctree-l1"><a class="reference internal" href="page_06.html">6. <span style="color:lightblue">Modulations of EC across tasks</span></a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. <span style="color:lightblue">Introduction</span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="page_02.html">2. <span style="color:lightblue">Fetching the 7T-fMRI retintotopy dataset</span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="page_03.html">3. <span style="color:lightblue">Grouping V1, V2, and V3 data into foveal and para-foveal quarter-fields</span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="page_04.html">4. <span style="color:lightblue">Modeling the propagation of BOLD activity across V1, V2 and V3 with a noise diffusion network</span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="page_05.html">5. <span style="color:lightblue">Common underlying structure in Effective Connectivity</span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="page_06.html">6. <span style="color:lightblue">Rebalancing in foveal and para-foveal responses across tasks</span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="page_07.html">7. <span style="color:lightblue">Discussion and Conclusion</span></a></li>
 </ul>
 
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="index.html" title="previous chapter"><strong>Task-dependent Directed Interactions Across Human Visual Cortex</strong></a></li>
-      <li>Next: <a href="page_02.html" title="next chapter"><span class="section-number">2. </span><span style="color:lightblue">Modeling the foveal confluence</span></a></li>
+      <li>Previous: <a href="index.html" title="previous chapter"><strong>Task-dependent Directed Interactions Across Early Visual Cortex Measured with 7T fMRI</strong></a></li>
+      <li>Next: <a href="page_02.html" title="next chapter"><span class="section-number">2. </span><span style="color:lightblue">Fetching the 7T-fMRI retintotopy dataset</span></a></li>
   </ul></li>
 </ul>
 </div>

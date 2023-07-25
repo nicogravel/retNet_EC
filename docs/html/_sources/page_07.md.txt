@@ -1,0 +1,25 @@
+---
+layout: default
+title: "retNet_EC"
+---
+
+
+
+# <span style="color:lightblue">Discussion and Conclusion</span>
+
+<hr style="border: 1px solid black; width:100%;"></hr>
+
+
+* We confirm previous findings for evidence of task-dependent changes in directed interactions across early visual cortex.
+  
+
+* We extend these findings by including a new task (MOVIE) and show that a similar reconfiguration of feedforward and feedback connections between parafoveal and foveal regions occur, with feedback- outweighting feedforward- interactions during cognitively demanding tasks (VFM and MOVIE).
+  
+
+* Our findings demonstrate the reliability of our approach to summarize the neuronal interactions unfolding across the underlying circuit layout of the visual cortex during different perceptual tasks.
+  
+
+We conclude that the relationship between BOLD statistics and the propagation of neuronal activity summarized by our modeling approach is of fundamental and methodological interest, as it opens the door to study neuronal circuit dynamics during different tasks noninvasively in humans.
+
+## Poster presented in the organization for Human Brain Mapping Conference (29th Annual Meeting in Montréal, Canada):
+![](/figures/posterOHBM2023_Gravel.png){width="800px" align=center}

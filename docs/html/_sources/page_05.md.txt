@@ -5,8 +5,15 @@ title: "retNet_EC"
 
 
 
-# <span style="color:lightblue">Task-dependent organization in EC for VFM, RS and MOVIE tasks</span>
+# <span style="color:lightblue">Common underlying structure in Effective Connectivity</span>
+
+|![](/figures/Fig1_HCP_v2_95.png){width="800px" align=center}|
+|:--:|
+| **Task-dependent organization in EC for VFM, RS and MOVIE tasks.**  This plot displays a visualization of feedforward, lateral and feedback EC links between  the 24 ROIs in an idealized network model of visual cortical areas V1, V2, and V3. A) The selectivity to visual field position within the image can be described in polar coordinates, with a radius indicating distance from the fixation point (right half of the circle) and an angle indicating cardinality (left half of the circle). B) Flattened cortical reconstruction showing visual cortical maps V1, V2 and V3. Within each of these maps, nearby neurons respond to nearby locations in the visual image, with this property (receptive fields) extending along cortical hierarchy. For V1, V2 and V3, left and right halves of the visual field project to opposite cortical hemispheres, with visual field selectivity inverted across the horizontal meridian. Furthermore, V2 and V3 are split into dorsal and ventral quarterfields, each containing an inverted representation of the upper and lower visual field. C) The organization of early visual cortical maps V1, V2 and V3 cluster around a single foveal representation and can be described using an banded 2D model that accounts for retinotopy, cortical magnification and anisotropy [4]. D) The banded 2D model [4] was used to depict the feedback, lateral and feedforward elements of the resulting noise-diffusion networks separately for each task. Arrows depict the strengths and direction of the 90% percentile of the principal component of the EC, with colors indicating average EC magnitudes (normalized across subjects).  For each task, the EC thus depicts different interaction regimes.|
+
 
 <hr style="border: 1px solid black; width:100%;"></hr>
 
-![](/figures/Abstract_Fig_1.png){width="600px"  align=center}
+
+
+

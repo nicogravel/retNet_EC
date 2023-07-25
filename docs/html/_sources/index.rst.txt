@@ -4,14 +4,33 @@
    contain the root `toctree` directive.
 
 
-**Task-dependent Directed Interactions Across Human Visual Cortex**
+**Task-dependent Directed Interactions Across Early Visual Cortex Measured with 7T fMRI**  
 ########
-.. image:: /figures/visualcoordmappings.png
-      :width: 1000
+.. image:: /figures/CortexModel_HCP_EC_ff_vfm_95.png
+      :width: 300
+.. image:: /figures/CortexModel_HCP_EC_lateral_vfm_95.png
+      :width: 300
+.. image:: /figures/CortexModel_HCP_EC_fb_vfm_95.png
+      :width: 300
+
+.. image:: /figures/CortexModel_HCP_EC_ff_mov_95.png
+      :width: 300
+.. image:: /figures/CortexModel_HCP_EC_lateral_mov_95.png
+      :width: 300
+.. image:: /figures/CortexModel_HCP_EC_fb_mov_95.png
+      :width: 300
+
+.. image:: /figures/CortexModel_HCP_EC_ff_rest_95.png
+      :width: 300
+.. image:: /figures/CortexModel_HCP_EC_lateral_rest_95.png
+      :width: 300
+.. image:: /figures/CortexModel_HCP_EC_fb_rest_95.png
+      :width: 300
       
 *****
-Network model of task-dependent effective connectivity across the human V1-V2-V3 complex using 7T-HCP dataset
+Documentation
 *****
+
 
 
 
@@ -26,3 +45,4 @@ Network model of task-dependent effective connectivity across the human V1-V2-V3
     page_04
     page_05
     page_06
+    page_07

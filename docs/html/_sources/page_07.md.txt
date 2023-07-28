@@ -21,5 +21,5 @@ title: "retNet_EC"
 
 We conclude that the relationship between BOLD statistics and the propagation of neuronal activity summarized by our modeling approach is of fundamental and methodological interest, as it opens the door to study neuronal circuit dynamics during different tasks noninvasively in humans.
 
-## Poster presented in the organization for Human Brain Mapping Conference (29th Annual Meeting in Montréal, Canada):
-![](/figures/posterOHBM2023_Gravel.png){width="800px" align=center}
+## Poster presented in the Organization for Human Brain Mapping conference (29th Annual Meeting in Montréal, Canada):
+![](/figures/posterOHBM2023_Gravel.png){width="1000px" align=center}

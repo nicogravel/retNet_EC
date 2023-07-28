@@ -5,9 +5,28 @@ title: "retNet_EC"
 
 
 
-# <span style="color:lightblue">Fetching the 7T-fMRI retintotopy dataset</span>
+# <span style="color:lightblue">Methods</span>
 
 <hr style="border: 1px solid black; width:100%;"></hr>
 
+The methods here presented are a work in progress: The Jupyter notebooks, as well as the Matlab scripts, are not yet well commented. Some refactoring will ocur in the upcoming days. Write me an aimail if you want to use the methods or have any questions.
+
+## Fetching the 7T-fMRI retintotopy dataset
+
 * Download the HCP data ([Jupyter notebook](https://github.com/nicogravel/retNet_EC/blob/main/notebooks/HCP_7T_fetch.ipynb))
 
+
+## Grouping V1, V2, and V3 data into foveal and para-foveal quarter-fields
+
+* Group the data ([Jupyter notebook](https://github.com/nicogravel/retNet_EC/blob/main/notebooks/HCP_ECVP_quadrants.ipynb))
+
+## Modeling the propagation of BOLD activity across V1, V2 and V3 with a noise diffusion network
+
+* Fit the noise difussion network model ([Jupyter notebook](https://github.com/nicogravel/retNet_EC/blob/main/notebooks/HCP_7T_ret_quad_NDNetwork_fit.ipynb))
+
+* Statistical assessment of the model's effective connectivity (EC) ([Jupyter notebook](https://github.com/nicogravel/retNet_EC/blob/main/notebooks/HCP_7T_ret_quad_NDNetwork_stat.ipynb))
+
+* Plotting the model's EC onto the Schira's 2D-banded model of the foveal confluence ([Matlab script](https://github.com/nicogravel/retNet_EC/blob/main/scripts/plot_EC.m))
+
+
+* Group (into foveal and para-foveal ROIs) and plot the model's EC and Sigma ([Matlab script](https://github.com/nicogravel/retNet_EC/blob/main/scripts/plot_sigma.m))

@@ -1,6 +1,7 @@
 ---
 layout: default
-title: "retNet_EC"
+title: "discussion"
+comments: true
 ---
 
 
@@ -23,3 +24,14 @@ We conclude that the relationship between BOLD statistics and the propagation of
 
 ## Poster presented in the Organization for Human Brain Mapping conference (29th Annual Meeting in Montréal, Canada):
 ![](/figures/posterOHBM2023_Gravel.png){width="1000px" align=center}
+
+
+<br> 
+<br> 
+<br> 
+<br>
+<br> 
+
+
+```{disqus}
+```

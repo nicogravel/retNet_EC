@@ -50,3 +50,7 @@ Documentation
     page_05
     ..page_06
     page_07
+
+
+    .. disqus::
+

@@ -1,6 +1,7 @@
 ---
 layout: default
-title: "retNet_EC"
+title: "modeling"
+comments: true
 ---
 
 
@@ -18,3 +19,14 @@ title: "retNet_EC"
 
 
 * Group (into foveal and para-foveal ROIs) and plot the model's EC and Sigma ([Matlab script](https://github.com/nicogravel/retNet_EC/blob/main/scripts/plot_sigma.m))
+
+
+<br> 
+<br> 
+<br> 
+<br>
+<br> 
+
+
+```{disqus}
+```

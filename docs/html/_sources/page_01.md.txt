@@ -1,6 +1,7 @@
 ---
 layout: default
-title: "retNet_EC"
+title: "Intro"
+comments: true
 ---
 
 
@@ -22,3 +23,12 @@ Scrutiny of the cortical neuronal circuits underlying human visual perception ty
   :filter: docname in docnames  
 ```
 
+<br> 
+<br> 
+<br> 
+<br>
+<br> 
+
+
+```{disqus}
+```

@@ -1,6 +1,7 @@
 ---
 layout: default
-title: "retNet_EC"
+title: "ROIs"
+comments: true
 ---
 
 
@@ -11,3 +12,13 @@ title: "retNet_EC"
 
 
 * Group the data ([Jupyter notebook](https://github.com/nicogravel/retNet_EC/blob/main/notebooks/HCP_ECVP_quadrants.ipynb))
+
+<br> 
+<br> 
+<br> 
+<br>
+<br> 
+
+
+```{disqus}
+```

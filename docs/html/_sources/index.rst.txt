@@ -52,5 +52,5 @@ Documentation
     page_07
 
 
-    .. disqus::
+.. disqus::
 

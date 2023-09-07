@@ -10,7 +10,7 @@ comments: true
 
 <hr style="border: 1px solid black; width:100%;"></hr>
 
-The methods here presented are a work in progress: The Jupyter notebooks, as well as the Matlab scripts, are not yet well commented. Some refactoring will ocur in the upcoming days. Write me an aimail if you want to use the methods or have any questions.
+The methods presented here are a work in progress. Both the Jupyter notebooks and the Matlab scripts are not fully commented at the moment. However, we plan to make some refinements in the next few weeks. Should you be interested in employing these methods or if you have any questions, please feel free to reach out to me. I would be more than happy to assist you further.
 
 ## Fetching the 7T-fMRI retintotopy dataset
 

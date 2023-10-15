@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Methods"
+title: "methods"
 comments: true
 ---
 
@@ -12,18 +12,18 @@ comments: true
 
 The methods presented here are a work in progress. Both the Jupyter notebooks and the Matlab scripts are not fully commented at the moment. However, we plan to make some refinements in the next few weeks. Should you be interested in employing these methods or if you have any questions, please feel free to reach out to me. I would be more than happy to assist you further.
 
-## Fetching the 7T-fMRI retintotopy dataset
+## Fetching () the 7T-fMRI retinotopy dataset
 
-* Download the HCP data ([Jupyter notebook](https://github.com/nicogravel/retNet_EC/blob/main/notebooks/HCP_7T_fetch.ipynb))
+* Download the right HCP data to run the examples ([Jupyter notebook](https://github.com/nicogravel/retNet_EC/blob/main/notebooks/HCP_7T_fetch.ipynb))
 
 
 ## Grouping V1, V2, and V3 data into foveal and para-foveal quarter-fields
 
-* Group the data ([Jupyter notebook](https://github.com/nicogravel/retNet_EC/blob/main/notebooks/HCP_ECVP_quadrants.ipynb))
+* Group the **retinotopy** data into ROIs and tasks ([Jupyter notebook](https://github.com/nicogravel/retNet_EC/blob/main/notebooks/HCP_ECVP_quadrants.ipynb))
 
-## Modeling the propagation of BOLD activity across V1, V2 and V3 with a noise diffusion network
+## Modelling the propagation of BOLD activity across V1, V2 and V3 with a noise diffusion network
 
-* Fit the noise difussion network model ([Jupyter notebook](https://github.com/nicogravel/retNet_EC/blob/main/notebooks/HCP_7T_ret_quad_NDNetwork_fit.ipynb))
+* Fit an (*multivariate Ornstein-Uhlenbeck**) **network model** ([Jupyter notebook](https://github.com/nicogravel/retNet_EC/blob/main/notebooks/HCP_7T_ret_quad_NDNetwork_fit.ipynb))
 
 * Statistical assessment of the model's effective connectivity (EC) ([Jupyter notebook](https://github.com/nicogravel/retNet_EC/blob/main/notebooks/HCP_7T_ret_quad_NDNetwork_stat.ipynb))
 
@@ -32,11 +32,11 @@ The methods presented here are a work in progress. Both the Jupyter notebooks an
 
 * Group (into foveal and para-foveal ROIs) and plot the model's EC and Sigma ([Matlab script](https://github.com/nicogravel/retNet_EC/blob/main/scripts/plot_sigma.m))
 
-<br> 
-<br> 
-<br> 
 <br>
-<br> 
+<br>
+<br>
+<br>
+<br>
 
 
 ```{disqus}

@@ -7,36 +7,10 @@
 **Task-dependent Directed Interactions Across Early Visual Cortex Measured with 7T fMRI**
 ########
 
-Poster presented in the Organization for Human Brain Mapping conference (29th Annual Meeting in Montréal, Canada):
-![](/figures/posterOHBM2023_Gravel.png){width="1000px" align=center}
-
 .. image:: /figures/posterOHBM2023_Gravel.png
       :width: 1000
 
 
-      .. image:: /figures/fffb.png
-            :width: 1000
-
-..
-      .. image:: /figures/CortexModel_HCP_EC_fb_vfm_95.png
-            :width: 500
-..
-      .. image:: /figures/CortexModel_HCP_EC_lateral_vfm_95.png
-      :width: 300
-..
-      .. image:: /figures/CortexModel_HCP_EC_ff_mov_95.png
-            :width: 300
-      .. image:: /figures/CortexModel_HCP_EC_lateral_mov_95.png
-            :width: 300
-      .. image:: /figures/CortexModel_HCP_EC_fb_mov_95.png
-            :width: 300
-
-      .. image:: /figures/CortexModel_HCP_EC_ff_rest_95.png
-            :width: 300
-      .. image:: /figures/CortexModel_HCP_EC_lateral_rest_95.png
-            :width: 300
-      .. image:: /figures/CortexModel_HCP_EC_fb_rest_95.png
-            :width: 300
 
 *****
 Documentation

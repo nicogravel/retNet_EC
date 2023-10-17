@@ -1,2 +1,4 @@
 # retNet_EC
-Network model for the estimation of effective connectivity in retinotopic-mapping, resting-state, and movie- watching 7T-HCP data.
+
+[Task-dependent directed interactions (i.e. **effective connectivity**) across early visual cortex measured with 7T-HCP data retinotopy dataset.](https://nicogravel.github.io/retNet_EC/html/index.html)
+

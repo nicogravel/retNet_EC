@@ -10,9 +10,35 @@ comments: true
 
 <hr style="border: 1px solid black; width:100%;"></hr>
 
-
+reti and movie giving rise to similar pattern, feedback from periphery to fovea ... striking yet meaningful. Resting state more intrinsic patterns, also relevant and interesting
 ## Summary
-Scrutiny of the cortical neuronal circuits underlying human visual perception typically involves the summarization of large-scale recordings of brain activity under different perceptual states, with the combination of various measurement modalities and modeling techniques being critical in revealing organizing principles. However, how these approaches relate to the brain’s anatomical structure at a more local scale, such as that of retinotopically organized neuronal circuits in the visual cortex, remains an area of active research. Here, we set out to study such circuits by applying a previously established model of network communicability {cite:p}`mitra_lag_2014` {cite:p}`GILSON2018534` to resting state (RS), movie watching (MOVIE) and visual field mapping (VFM) data from 154 subjects in the Human Connectome Project (HCP) 7T-fMRI dataset {cite:p}`benson_human_2018`. By estimating the effective connectivity (EC) of the noise-diffusion network model that better predicts the spatiotemporal covariance structure of the data, we disentangle the contributions of directed interactions and local dynamics in shaping blood-oxygen dependent (BOLD) activity propagation across visual cortical areas V1, V2 and V3 {cite:p}`Gravel.2020`. First, addressing the need for validation of our approach, we confirm previous findings using 7T-fMRI and a smaller dataset for evidence of task-dependent changes in directed interactions across early visual cortex {cite:p}`Schira.2010`. We then extend these findings by including a new task (MOVIE) and show that a similar reconfiguration of feedforward and feedback connections between parafoveal and foveal regions occur, with feedback- outweighting feedforward- interactions during cognitively demanding tasks (VFM and MOVIE). Our findings demonstrate the reliability of our approach to summarize the neuronal interactions unfolding across the underlying circuit layout of the visual cortex during different perceptual states. We conclude that the relationship between BOLD statistics and the propagation of neuronal activity summarized by our modeling approach is of fundamental and methodological interest, as it opens the door to study neuronal circuit dynamics during different tasks non-invasively in humans.
+Scrutiny of the cortical neuronal circuits underlying human visual perception typically involves the summarization of large-scale recordings of brain activity under different perceptual states, with the combination of various measurement modalities and modeling techniques being critical in revealing organizing principles. However, how these approaches relate to the brain’s anatomical structure at a more local scale, such as that of retinotopically organized neuronal circuits in the visual cortex, remains an area of active research.
+
+In this seminar, I will show from three recent studies on the the role of this circuits its in shaping the relationship between structure and function.
+
+How neuronal signal across fine rained retiniotopic areas provide a good proxy to benchmark fMRI. To push the limits to see
+
+Previous:
+  1) Spatial integation within EVC: CF modeling during RS
+  2) Temporal dynamics across EVC: CC paper
+
+Preliminary results:
+  1) Validation with HCP Retinotopy dataset and movie viewing
+    How these relationship are modulated acorss different conditions.
+  32) Relating directed EC to electrophysiology: Laminar Differences in Responses to Naturalistic Images in Macaque Primary Visual Cortex Revealed by Multivariate Pattern Analysis
+
+Future directions:
+  1) Relating retinotopy to EC using high-resolution layer 7T-fMRI: relationship between pRF size and directed interactions
+  2) Constraining anatomy with high resolution tractography
+
+
+1)  applying a previously established model of network communicability {cite:p}`GILSON2018534` to resting state (RS), movie watching (MOVIE) and visual field mapping (VFM) data from 154 subjects in the Human Connectome Project (HCP) 7T-fMRI dataset {cite:p}`benson_human_2018`. By estimating the effective connectivity (EC) of the noise-diffusion network model that better predicts the spatiotemporal covariance structure of the data, we disentangle the contributions of directed interactions and local dynamics in shaping blood-oxygen dependent (BOLD) activity propagation across visual cortical areas V1, V2 and V3 {cite:p}`Gravel.2020`.
+
+First, addressing the need for validation of our approach, we confirm previous findings using 7T-fMRI and a smaller dataset for evidence of task-dependent changes in directed interactions across early visual cortex {cite:p}`Schira.2010`.
+
+We then extend these findings by including a new task (MOVIE) and show that a similar reconfiguration of feedforward and feedback connections between parafoveal and foveal regions occur, with feedback- outweighting feedforward- interactions during cognitively demanding tasks (VFM and MOVIE). Our findings demonstrate the reliability of our approach to summarize the neuronal interactions unfolding across the underlying circuit layout of the visual cortex during different perceptual states.
+
+We conclude that the relationship between BOLD statistics and the propagation of neuronal activity summarized by our modeling approach is of fundamental and methodological interest, as it opens the door to study neuronal circuit dynamics during different tasks non-invasively in humans.
 
 
 
@@ -45,3 +71,18 @@ We conclude that the relationship between BOLD statistics and the propagation of
 
 ```{disqus}
 ```
+
+Mapping Short Association Fibers in the Early Cortical Visual Processing Stream Using In Vivo Diffusion Tractography
+
+Linking Structure-Function Relationships in Human Visual Cortex through Computational Neuroimaging and Electrophysiology: Insights on the Human Early Visual Foveal Cluster
+
+Summary:
+  Scrutiny of the cortical neuronal circuits underlying human visual perception typically involves the summarization of large-scale recordings of brain activity under different perceptual states, with the combination of various measurement modalities and modeling techniques being critical in revealing organizing principles. In this seminar, we'll delve into the relationship between anatomical structure and evolving patterns of neuronal functional dynamics within the early visual foveal cluster (V1-V2-V3). I will show how we can inform our understanding of visual perception through through different recording modalities, combining high-resolution fMRI, laminar electrophysiology and computational modeling. I will present key findings on task-dependent modulation of directed interactions within visual cortical in humans areas and laminar distinctions in visual processing in Macaque, as well as touch on preliminary validation work. I look forward to discussing new advancements and techniques and to provide a clearer picture of neuronal circuit dynamics.
+
+Key points to be discussed are:
+
+    The utilization of high-resolution retinotopic maps as benchmarks for fMRI.
+    Insights from spatial and temporal integration approaches within the early visual cortex.
+    Preliminary results that authenticate these methods using the Human Connectome Project's (HCP) Retinotopy dataset.
+    The intersection of EC with electrophysiology, featuring laminar differences in naturalistic image responses in Macaque.
+    Future research directions, such as linking retinotopic maps to EC using ultra-high-resolution layer 7T fMRI and constraining anatomical models with advanced tractography techniques.

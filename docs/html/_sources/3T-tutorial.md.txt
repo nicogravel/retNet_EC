@@ -1,0 +1,276 @@
+---
+layout: default
+title: "Retinotopy tutorial"
+comments: true
+---
+
+
+
+# <span style="color:lightblue">Retinotopy tutorial</span>
+
+
+
+
+
+<details>
+  <summary><span style="color:#3382FF">Set up research project codebook folder using Python, Sphinx and Github</span></summary>  
+
+  First, we want to create a project folder that will contain the research code (Matlab, Python, Jupyter notebooks, etc), the data, the results and the documentatioin:
+
+  ```
+  ├── data
+    └── raw
+    └── processed
+  ├── docs
+  ├── results
+  ├── reports
+    └── figures
+    └── notes
+    └── references
+    └── slides
+  ├── code
+    └── notebooks
+    └── scripts
+    └── tests
+  ├── src
+    └── data
+    └── fatures
+    └── models
+    └── visualization
+  ├── tests
+  └── .gitignore
+  └── environment.yml
+  └── README.md
+  ```
+
+</details>
+
+
+
+
+<details>
+  <summary><span style="color:#3382FF"> Set up Conda environment from another computer</span></summary>  
+
+  We can then recreate Conda environment from another computer:
+
+  ```
+  conda env create --name recoveredenv --file environment.yml
+  ```
+
+</details>
+
+
+
+<details>
+  <summary><span style="color:#3382FF"> Initialize or fork Github project</span></summary>  
+
+
+  ```
+  echo "# MWlamprop" >> README.md
+  git init
+  git add README.md
+  git commit -m "first commit"
+  git branch -M main
+  git remote add origin https://github.com/nicogravel/MWlamprop.git
+  git push -u origin main
+  ```
+
+</details>
+
+
+<details>
+  <summary><span style="color:#3382FF"> Create a Python package</span></summary>  
+
+  Create a setup.py file in the root of your project and ad the following:
+
+  ```
+  from setuptools import find_packages, setup
+
+  setup(
+      name='src',
+      packages=find_packages(),
+  )
+  ```
+  Create an empty __init__.py file under the src directory:
+
+  ```
+  touch src/__init__.py
+  ```
+
+  Install your package from the root directory:
+
+  ```
+  pip install -e .
+  ```
+
+  Add a python file that prints "hello world" to your package:
+  ```
+  echo "print('hello world')" > src/helloworld.py
+  python
+  >>> import src.helloworld
+  hello world
+  >>> exit()
+  ```
+
+</details>
+
+
+<details>
+  <summary><span style="color:#3382FF"> Generate project and code documentation using Sphinx</span></summary>  
+
+  The folder *docs* will be used to generate [sphinx](https://www.sphinx-doc.org/en/master/index.html) docs, `cd` into this directory and run:
+
+  ```
+  pip install sphinx
+  pip install sphinxcontrib-bibtex
+  pip install sphinxcontrib-napoleon
+  pip install -U sphinxcontrib-matlabdomain
+  pip install sphinx-autodoc-typehints
+
+  sphinx-quickstart
+  make html
+  ```
+
+  We can then install [sphinx.ext.napoleon](https://www.sphinx-doc.org/ar/master/usage/extensions/napoleon.html), a *sphinx* plugin, to automatically read the *doctsrings* we have written as 'readme's' in the top of our python scripts, and add that content to the package dictionary of functions. To do so:
+
+  ```
+  sphinx-apidoc -f -o source /Users/nicogravel/Documents/Gandalf/MWlamprop/lamidec
+  napeoleon extension of Phinx to parse Python code into readable *.rst* documentation files.
+  ```
+
+
+</details>
+
+
+
+<details>
+  <summary><span style="color:#3382FF"> Work: edit, make and commit</span></summary>  
+
+
+  After these steps one wants to *make* the documentation locally. To build the documentation automatically, edit then the document modules.rst –if nescessary, and do *make clean* followed by *make html*.
+
+  ```
+  cd docs
+  make clean
+  make html
+  ```
+
+  After adding new code and document it as described, commit the changes to Github and update both the documentation and
+  the package.
+
+</details>
+
+
+<details>
+  <summary><span style="color:#E533FF"> Prepare and present retinotopy stimulus</span></summary>  
+
+</details>
+
+<details>
+  <summary><span style="color:#E533FF"> Acquisition guidelines (triggers, sequences and other scanning parameters) </span></summary>  
+
+</details>
+
+<details>
+  <summary><span style="color:#E533FF"> Data collection and organization into BIDS format</span></summary>  
+
+</details>
+
+<details>
+  <summary><span style="color:#E533FF"> Preprocessing of the functional data</span></summary>  
+
+</details>
+
+
+<details>
+  <summary><span style="color:#E533FF"> Preprocessing of the anatomical data</span></summary>  
+
+</details>
+
+
+<details>
+  <summary><span style="color:#E533FF"> Coregistration of functional and anatomical</span></summary>  
+
+</details>
+
+<details>
+  <summary><span style="color:#E533FF"> Population receptive field mapping (using **pyprf**)</span></summary>  
+
+</details>
+
+
+<details>
+  <summary><span style="color:#E533FF"> Visualizing the results</span></summary>  
+
+</details>
+
+<details>
+  <summary><span style="color:#E533FF"> Defining regions of interests</span></summary>  
+
+</details>
+
+<details>
+  <summary><span style="color:#E533FF"> Extracting and grouping the time series</span></summary>  
+
+</details>
+
+<details>
+  <summary><span style="color:#E533FF"> Fitting GLMs</span></summary>  
+
+</details>
+
+<details>
+  <summary><span style="color:#E533FF"> Computing **functional connectivity**</span></summary>  
+
+</details>
+
+<details>
+  <summary><span style="color:#E533FF"> Computing **effective connectivity**</span></summary>  
+
+</details>
+
+
+<details>
+  <summary><span style="color:#E533FF"> Parse trials from another task</span></summary>  
+
+</details>
+
+<details>
+  <summary><span style="color:#E533FF"> Work with anatomical or functional atlases</span></summary>  
+
+</details>
+
+
+<details>
+  <summary><span style="color:#E533FF"> Laminar fMRI</span></summary>  
+
+</details>
+
+<details>
+  <summary><span style="color:#E533FF"> Statistical approach</span></summary>  
+
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+```{disqus}
+```

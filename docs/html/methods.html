@@ -45,26 +45,26 @@
   <section class="tex2jax_ignore mathjax_ignore" id="span-style-color-lightblue-methods-span">
 <h1><span class="section-number">3. </span><span style="color:lightblue">Methods</span><a class="headerlink" href="#span-style-color-lightblue-methods-span" title="Permalink to this heading">¶</a></h1>
 <hr style="border: 1px solid black; width:100%;"></hr>
-<p>The methods presented here are a work in progress. Both the Jupyter notebooks and the Matlab scripts are not fully commented at the moment. However, we plan to make some refinements in the next few weeks. Should you be interested in employing these methods or if you have any questions, please feel free to reach out to me. I would be more than happy to assist you further.</p>
-<section id="fetching-the-7t-fmri-retinotopy-dataset">
-<h2><span class="section-number">3.1. </span>Fetching () the 7T-fMRI retinotopy dataset<a class="headerlink" href="#fetching-the-7t-fmri-retinotopy-dataset" title="Permalink to this heading">¶</a></h2>
+<p>The methods presented here are a work in progress. For implementation inquiries or clarifications, please do not hesitate to contact me.</p>
+<section id="download-the-hcp-7t-fmri-retinotopy-dataset">
+<h2><span class="section-number">3.1. </span>Download the HCP 7T-fMRI retinotopy dataset<a class="headerlink" href="#download-the-hcp-7t-fmri-retinotopy-dataset" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
-<li><p>Download the right HCP data to run the examples (<a class="reference external" href="https://github.com/nicogravel/retNet_EC/blob/main/notebooks/HCP_7T_fetch.ipynb">Jupyter notebook</a>)</p></li>
+<li><p>Fetch the HCP data using <a class="reference external" href="https://wiki.humanconnectome.org/display/PublicData/How+To+Connect+to+Connectome+Data+via+AWS">AWS</a> and Python (<a class="reference external" href="https://github.com/nicogravel/retNet_EC/blob/main/notebooks/HCP_7T_fetch.ipynb">Jupyter notebook</a>)</p></li>
 </ul>
 </section>
-<section id="grouping-v1-v2-and-v3-data-into-foveal-and-para-foveal-quarter-fields">
-<h2><span class="section-number">3.2. </span>Grouping V1, V2, and V3 data into foveal and para-foveal quarter-fields<a class="headerlink" href="#grouping-v1-v2-and-v3-data-into-foveal-and-para-foveal-quarter-fields" title="Permalink to this heading">¶</a></h2>
+<section id="grouping-v1-v2-and-v3-data-into-foveal-and-para-foveal-rois">
+<h2><span class="section-number">3.2. </span>Grouping V1, V2, and V3 data into foveal and para-foveal ROIs<a class="headerlink" href="#grouping-v1-v2-and-v3-data-into-foveal-and-para-foveal-rois" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
-<li><p>Group the <strong>retinotopy</strong> data into ROIs and tasks (<a class="reference external" href="https://github.com/nicogravel/retNet_EC/blob/main/notebooks/HCP_ECVP_quadrants.ipynb">Jupyter notebook</a>)</p></li>
+<li><p>Define the ROIs using the average pRF parameters and the Wang-Kastner (<a class="reference external" href="https://github.com/nicogravel/retNet_EC/blob/main/notebooks/HCP_ECVP_quadrants.ipynb">Jupyter notebook</a>)</p></li>
 </ul>
 </section>
-<section id="modelling-the-propagation-of-bold-activity-across-v1-v2-and-v3-with-a-noise-diffusion-network">
-<h2><span class="section-number">3.3. </span>Modelling the propagation of BOLD activity across V1, V2 and V3 with a noise diffusion network<a class="headerlink" href="#modelling-the-propagation-of-bold-activity-across-v1-v2-and-v3-with-a-noise-diffusion-network" title="Permalink to this heading">¶</a></h2>
+<section id="modelling-the-propagation-of-bold-activity-across-v1-v2-and-v3-using-a-multivariate-ornstein-uhlenbeck-network-model">
+<h2><span class="section-number">3.3. </span>Modelling the propagation of BOLD activity across V1, V2 and V3 using a multivariate Ornstein-Uhlenbeck network model<a class="headerlink" href="#modelling-the-propagation-of-bold-activity-across-v1-v2-and-v3-using-a-multivariate-ornstein-uhlenbeck-network-model" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
-<li><p>Fit an (<em>multivariate Ornstein-Uhlenbeck</em>*) <strong>network model</strong> (<a class="reference external" href="https://github.com/nicogravel/retNet_EC/blob/main/notebooks/HCP_7T_ret_quad_NDNetwork_fit.ipynb">Jupyter notebook</a>)</p></li>
-<li><p>Statistical assessment of the model’s effective connectivity (EC) (<a class="reference external" href="https://github.com/nicogravel/retNet_EC/blob/main/notebooks/HCP_7T_ret_quad_NDNetwork_stat.ipynb">Jupyter notebook</a>)</p></li>
-<li><p>Plotting the model’s EC onto the Schira’s 2D-banded model of the foveal confluence (<a class="reference external" href="https://github.com/nicogravel/retNet_EC/blob/main/scripts/plot_EC.m">Matlab script</a>)</p></li>
-<li><p>Group (into foveal and para-foveal ROIs) and plot the model’s EC and Sigma (<a class="reference external" href="https://github.com/nicogravel/retNet_EC/blob/main/scripts/plot_sigma.m">Matlab script</a>)</p></li>
+<li><p>Fit <strong>network model</strong> (<a class="reference external" href="https://github.com/nicogravel/retNet_EC/blob/main/notebooks/HCP_7T_ret_quad_NDNetwork_fit.ipynb">Jupyter notebook</a>)</p></li>
+<li><p>Statistical assessment of the model’s effective connectivity (EC) and its task-dependent changes (<a class="reference external" href="https://github.com/nicogravel/retNet_EC/blob/main/notebooks/HCP_7T_ret_quad_NDNetwork_stat.ipynb">Jupyter notebook</a>)</p></li>
+<li><p>Visualize the structure of EC interactions across ROIs using a <a class="reference external" href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1000651">2D representation of the foveal confluence</a> (<a class="reference external" href="https://github.com/nicogravel/retNet_EC/blob/main/scripts/plot_EC.m">Matlab script</a>)</p></li>
+<li><p>Group the model’s parameters into larger ROIs for interpretation (<a class="reference external" href="https://github.com/nicogravel/retNet_EC/blob/main/scripts/plot_sigma.m">Matlab script</a>)</p></li>
 </ul>
 <br>
 <br>
